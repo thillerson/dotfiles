@@ -20,7 +20,7 @@ alias air="adl application.xml"
 alias cuke="cucumber features -t tony"
 alias restart="touch tmp/restart.txt"
 alias vim="vim -N"
-
+alias itest="infinity_test --rspec --rails"
 alias capd="cap deploy"
 
 #project aliases
