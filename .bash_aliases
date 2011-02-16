@@ -8,10 +8,6 @@ alias mv='mv -v'
 alias grep='grep --color'
 alias ssu="svn status -u"
 alias svn_addall="svn status | grep '^\?' | sed -e 's/? *//' | sed -e 's/ /\\ /g' | xargs svn add"
-alias srv='./script/server'
-alias srvd='./script/server --debugger'
-alias cons='./script/console'
-alias gen='./script/generate'
 alias rtag='find . -name *.rb | xargs ctags -a -e -f TAGS'
 alias devtail='tail -f -n0 log/development.log'
 
@@ -37,9 +33,8 @@ alias iblitz="cd ~/work/captionblitziphone"
 alias work="cd ~/work"
 alias peeps="cd ~/work/peeps"
 alias sketch="cd ~/work/sketch-pad"
-alias moms="cd ~/work/momentar"
-alias tat="cd ~/work/tatraib"
 alias bh="cd ~/work/boozehound"
+alias picnote="cd ~/work/picnote"
 
 #git aliases
 alias gst='git status'
@@ -52,6 +47,7 @@ alias gb='git branch --color'
 alias gba='git branch -a --color'
 alias gsvn='git svn'
 alias get='git fetch && git pull && git lol'
+alias gpom='git push origin master'
 
 alias gh="github"
 alias git="hub"
