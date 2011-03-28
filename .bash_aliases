@@ -32,9 +32,9 @@ alias blitz="cd ~/work/captioncontest"
 alias iblitz="cd ~/work/captionblitziphone"
 alias work="cd ~/work"
 alias peeps="cd ~/work/peeps"
-alias sketch="cd ~/work/sketch-pad"
 alias bh="cd ~/work/boozehound"
 alias picnote="cd ~/work/picnote"
+alias clickable="cd ~/work/clickable"
 
 #git aliases
 alias gst='git status'
