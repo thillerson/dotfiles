@@ -14,7 +14,7 @@ export HISTCONTROL=ignoreboth
 
 export LSCOLORS=dx
 
-export PATH=~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applications/flex_sdk/bin:~/work/hadoop/bin:~/work/hbase/bin:/usr/local/share/npm/bin:$PATH
+export PATH=~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:~/work/hadoop/bin:~/work/hbase/bin:/usr/local/share/npm/bin:$PATH
 
 #Homes
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
