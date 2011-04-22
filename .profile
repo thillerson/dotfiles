@@ -14,11 +14,12 @@ export HISTCONTROL=ignoreboth
 
 export LSCOLORS=dx
 
-export PATH=~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applications/flex_sdk/bin:~/work/hadoop/bin:~/work/hbase/bin:/usr/local/share/npm/bin:$PATH
+export PATH=~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:~/work/hadoop/bin:~/work/hbase/bin:/usr/local/share/npm/bin:/usr/local/Cellar/tomcat/6.0.26/bin:$PATH
 
 #Homes
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+export NODE_PATH="/usr/local/lib/node"
  
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # RVM completion
