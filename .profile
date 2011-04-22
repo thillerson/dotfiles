@@ -25,3 +25,12 @@ export NODE_PATH="/usr/local/lib/node"
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # RVM completion
 
 export EDITOR=vim
+
+ecollegelogin()
+{
+		 export ECOLLEGE_TOKEN=`curl --silent -F "client_id=30bb1d4f-2677-45d1-be13-339174404402" -F "grant_type=password" -F "username=ctstate\veronicastudent4" -F "password=veronicastudent4" https://m-api.ecollege.com/token | jsawk 'return unescape(this.access_token)'`
+	 }
+	 
+ecollegequery(){
+		 	 curl --silent -H "X-Authorization: Access_Token access_token=$ECOLLEGE_TOKEN" https://m-api.ecollege.com$@ | pp
+		 }
