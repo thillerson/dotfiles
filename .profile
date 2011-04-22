@@ -23,3 +23,5 @@ export NODE_PATH="/usr/local/lib/node"
  
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # RVM completion
+
+export EDITOR=vim
