@@ -10,6 +10,7 @@ alias ssu="svn status -u"
 alias svn_addall="svn status | grep '^\?' | sed -e 's/? *//' | sed -e 's/ /\\ /g' | xargs svn add"
 alias rtag='find . -name *.rb | xargs ctags -a -e -f TAGS'
 alias devtail='tail -f -n0 log/development.log'
+alias trail='tail -f'
 
 # iPhone simulator apps directory
 alias sim="cd ~/Library/Application\ Support/iPhone\ Simulator/3.2/Applications/"
