@@ -51,7 +51,6 @@ alias get='git fetch && git pull && git lol'
 alias gpom='git push origin master'
 
 alias gh="github"
-alias git="hub"
 
 pman() {
   man -t "${1}" | open -f -a /Applications/Preview.app/
