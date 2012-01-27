@@ -19,17 +19,13 @@ export PATH=~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applic
 #Homes
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
-export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH="/usr/local/lib/node_modules"
  
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # RVM completion
 
 export EDITOR=vim
 
-ecollegelogin() {
-	export ECOLLEGE_TOKEN=`curl --silent -F "client_id=30bb1d4f-2677-45d1-be13-339174404402" -F "grant_type=password" -F "username=ctstate\veronicastudent4" -F "password=veronicastudent4" https://m-api.ecollege.com/token | jsawk 'return unescape(this.access_token)'`
-}
-	 
-ecollegequery() {
-	curl --silent -H "X-Authorization: Access_Token access_token=$ECOLLEGE_TOKEN" https://m-api.ecollege.com$@ | pp
-}
+[[ -s "/Users/tony/.rvm/scripts/rvm" ]] && source "/Users/tony/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+source .custom_scripts
