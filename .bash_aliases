@@ -49,6 +49,7 @@ alias gba='git branch -a --color'
 alias gsvn='git svn'
 alias get='git fetch && git pull && git lol'
 alias gpom='git push origin master'
+alias gs='git status --short'
 
 alias gh="github"
 
