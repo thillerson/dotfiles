@@ -1,20 +1,22 @@
-# https://github.com/blinks zsh theme
+# Based on https://github.com/blinks zsh theme
 
-function _prompt_char() {
+function _git_char() {
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
-    echo "%{%F{blue}%}±%{%f%k%b%}"
+    echo "%{$fg_bold[green]%}±%{$reset_color%}"
   else
     echo ' '
   fi
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" [%{%B%F{blue}%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%K{black}%B%F{green}%}]"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
+local arrow_prompt="%(?,%{$fg[green]%}➔%{$reset_color%},%{$fg[red]%}➔%{$reset_color%})"
+
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}✐%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-PROMPT='%{%f%k%b%}
-%{%K{black}%B%F{green}%}%n%{%B%F{blue}%}@%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{black}%}%~%{%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}
-%{%K{black}%}$(_prompt_char)%{%K{black}%} %#%{%f%k%b%} '
+PROMPT='%{$reset_color%}
+%{$fg[yellow]$bg[black]%}%~ $(_git_char)$(git_prompt_info)%E%{$reset_color%}
+${arrow_prompt} %{$reset_color%} '
 
-RPROMPT='%{%F{yellow}%}$(~/.rvm/bin/rvm-prompt)%E%{%f%k%b%}'
+RPROMPT='%{$fg[yellow]%}$(~/.rvm/bin/rvm-prompt)%E%{$reset_color%}'
