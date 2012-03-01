@@ -25,7 +25,7 @@ ZSH_THEME="thillerson"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git ruby osx rvm)
+plugins=(rails3 git ruby osx rvm brew autojump vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 source .bash_aliases
@@ -42,3 +42,7 @@ export PATH=/Users/tony/.rvm/gems/ruby-1.9.3-p0/bin:/Users/tony/.rvm/gems/ruby-1
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "/Users/tony/.rvm/scripts/rvm" ]] && source "/Users/tony/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+ 
+if [ -f `brew --prefix`/etc/autojump ]; then
+	  . `brew --prefix`/etc/autojump
+fi
