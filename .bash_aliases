@@ -50,6 +50,7 @@ alias gsvn='git svn'
 alias get='git fetch && git pull && git lol'
 alias gpom='git push origin master'
 alias gs='git status --short'
+alias gsp='git smart-pull'
 
 alias gh="github"
 
