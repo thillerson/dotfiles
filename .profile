@@ -29,3 +29,6 @@ export EDITOR=vim
 [[ -s "/Users/tony/.rvm/scripts/rvm" ]] && source "/Users/tony/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 source .custom_scripts
+if [ -f /Users/tony/.api_keys ]; then
+	source .api_keys
+fi
