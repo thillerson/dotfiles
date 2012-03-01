@@ -17,4 +17,4 @@ PROMPT='%{%f%k%b%}
 %{%K{black}%B%F{green}%}%n%{%B%F{blue}%}@%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{black}%}%~%{%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}
 %{%K{black}%}$(_prompt_char)%{%K{black}%} %#%{%f%k%b%} '
 
-RPROMPT='%{%F{yellow}%}[$(~/.rvm/bin/rvm-prompt)]%E%{%f%k%b%'
+RPROMPT='%{%F{yellow}%}$(~/.rvm/bin/rvm-prompt)%E%{%f%k%b%}'
