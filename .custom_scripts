@@ -1,5 +1,5 @@
 ecollegelogin() {
-	export ECOLLEGE_TOKEN=`curl --silent -F "client_id=30bb1d4f-2677-45d1-be13-339174404402" -F "grant_type=password" -F "username=ctstate\veronicastudent4" -F "password=veronicastudent4" https://m-api.ecollege.com/token | python -mjson.tool `
+	export ECOLLEGE_TOKEN=`curl --silent -F "client_id=30bb1d4f-2677-45d1-be13-339174404402" -F "grant_type=password" -F "username=sandbox\mobilestu" -F "password=mobilestu" https://m-api.ecollege.com/token`
 	echo "eCollege Token: $ECOLLEGE_TOKEN"
 	export ECOLLEGE_ACCESS_TOKEN=`echo $ECOLLEGE_TOKEN | jsawk 'return this.access_token'`
 }
