@@ -29,6 +29,7 @@ plugins=(rails3 git ruby osx rvm brew autojump bundler)
 
 source $ZSH/oh-my-zsh.sh
 source .bash_aliases
+source .custom_scripts
 if [ -f $HOME/.api_keys ]; then
 	source .api_keys
 fi
