@@ -20,6 +20,7 @@ export PATH=~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applic
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 export NODE_PATH="/usr/local/lib/node_modules"
+export ANDROID_HOME="/Applications/android"
  
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # RVM completion
