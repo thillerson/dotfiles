@@ -38,9 +38,7 @@ alias picnote="cd ~/work/picnote"
 alias clickable="cd ~/work/clickable"
 
 #git aliases
-alias gst='git status'
 alias gl='git pull'
-alias gp='git push'
 alias gd='git diff'
 alias gc='git commit -v'
 alias gca='git commit -v -a'
@@ -51,6 +49,7 @@ alias get='git fetch && git pull && git lol'
 alias gpom='git push origin master'
 alias gs='git status --short'
 alias gsp='git smart-pull'
+alias gf='git flow'
 
 alias gh="github"
 
