@@ -27,6 +27,7 @@
 
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR='⮀'
+PROMPT_CHARACTER='➜ '
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -51,7 +52,8 @@ prompt_end() {
   else
     echo -n "%{%k%}"
   fi
-  echo -n "%{%f%}"
+  echo -n "
+$PROMPT_CHARACTER%{%f%}"
   CURRENT_BG=''
 }
 
