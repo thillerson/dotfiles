@@ -12,9 +12,6 @@ alias rtag='find . -name *.rb | xargs ctags -a -e -f TAGS'
 alias devtail='tail -f -n0 log/development.log'
 alias trail='tail -f'
 
-# iPhone simulator apps directory
-alias sim="cd ~/Library/Application\ Support/iPhone\ Simulator/3.2/Applications/"
-
 # program aliases
 alias m8="mate ."
 alias air="adl application.xml"
@@ -50,8 +47,7 @@ alias gpom='git push origin master'
 alias gs='git status --short'
 alias gsp='git smart-pull'
 alias gf='git flow'
-
-alias gh="github"
+alias git-conflicts="git ls-files -u | awk '{print $4}' | sort -u"
 
 pman() {
   man -t "${1}" | open -f -a /Applications/Preview.app/
