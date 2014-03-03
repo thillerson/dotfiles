@@ -52,6 +52,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "/Users/tony/.rvm/scripts/rvm" ]] && source "/Users/tony/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
  
 if [ -f `brew --prefix`/etc/autojump ]; then
-	  . `brew --prefix`/etc/autojump
+  . `brew --prefix`/etc/autojump
 fi
 
