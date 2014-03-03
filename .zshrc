@@ -30,10 +30,10 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(rails git ruby osx rvm brew autojump bundler git-flow gitignore)
 
 source $ZSH/oh-my-zsh.sh
-source .bash_aliases
-source .custom_scripts
+source $HOME/.bash_aliases
+source $HOME/.custom_scripts
 if [ -f $HOME/.api_keys ]; then
-	source .api_keys
+	source $HOME/.api_keys
 fi
 
 # Customize to your needs...
