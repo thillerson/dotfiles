@@ -52,3 +52,5 @@ alias git-conflicts="git ls-files -u | awk '{print $4}' | sort -u"
 pman() {
   man -t "${1}" | open -f -a /Applications/Preview.app/
 }
+
+alias gw='./gradlew'
