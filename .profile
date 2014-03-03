@@ -14,7 +14,7 @@ export HISTCONTROL=ignoreboth
 
 export LSCOLORS=dx
 
-export PATH=:/usr/local/bin:~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:/usr/local/Cellar/hbase/0.90.2/bin:/usr/local/share/npm/bin:/usr/local/Cellar/tomcat/6.0.26/bin:/usr/local/share/python:$PATH
+export PATH=:/usr/local/bin:~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:/usr/local/Cellar/hbase/0.90.2/bin:/usr/local/share/npm/bin:/usr/local/Cellar/tomcat/6.0.26/bin:/usr/local/share/pythonexport:$HOME/.cask/bin:$PATH
 
 #Homes
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
