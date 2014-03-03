@@ -38,7 +38,7 @@ fi
 
 # Customize to your needs...
 #Homes
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+export JAVA_HOME=/Library/Java/Home
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 export ANDROID_HOME="/Applications/android"
 export NODE_PATH="/usr/local/lib/node_modules"
