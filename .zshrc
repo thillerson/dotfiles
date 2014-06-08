@@ -42,6 +42,8 @@ export JAVA_HOME=/Library/Java/Home
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 export ANDROID_HOME="/Applications/android"
 export NODE_PATH="/usr/local/lib/node_modules"
+export NUNIT_HOME="/Users/tony/bin/NUnit"
+export GROOVY_HOME="/usr/local/opt/groovy/libexec"
 
 export PATH=/Users/tony/.rvm/gems/ruby-1.9.3-p0/bin:/Users/tony/.rvm/gems/ruby-1.9.3-p0@global/bin:/Users/tony/.rvm/rubies/ruby-1.9.3-p0/bin:/Users/tony/.rvm/bin:/Users/tony/bin:/Users/tony/bin/servers:/Users/tony/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:/usr/local/Cellar/hbase/0.90.2/bin:/usr/local/share/npm/bin:/usr/local/Cellar/tomcat/6.0.26/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/X11/bin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
