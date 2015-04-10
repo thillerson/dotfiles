@@ -21,6 +21,12 @@ alias vim="vim -N"
 alias itest="infinity_test --rspec --rails"
 alias capd="cap deploy"
 
+# Toggles
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias x5="sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer"
+alias x6="sudo xcode-select -switch /Applications/Xcode6-Beta5.app/Contents/Developer"
+
 #project aliases
 alias flounder="cd ~/work/flounder"
 alias Names="cd ~/work/seventytwonames/Names"
