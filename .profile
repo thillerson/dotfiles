@@ -19,15 +19,13 @@ export ANDROID_HOME="/Applications/android"
 
 export PATH=:/usr/local/bin:~/bin:~/bin/servers:~/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/usr/local/share/npm/bin:/usr/local/share/pythonexport:$HOME/.cask/bin:$JAVA_HOME/bin:$PATH
 
- 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # RVM completion
-
 export EDITOR=vim
-
-[[ -s "/Users/tony/.rvm/scripts/rvm" ]] && source "/Users/tony/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 source .custom_scripts
 if [ -f /Users/tony/.api_keys ]; then
 	source .api_keys
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
