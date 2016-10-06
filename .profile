@@ -12,7 +12,6 @@ export HISTCONTROL=ignoreboth
 export LSCOLORS=dx
 
 #Homes
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 export NODE_PATH="/usr/local/lib/node_modules"
 export ANDROID_HOME="/Applications/android"
@@ -25,7 +24,3 @@ source .custom_scripts
 if [ -f /Users/tony/.api_keys ]; then
 	source .api_keys
 fi
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -27,7 +27,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git ruby osx rvm brew autojump bundler git-flow gitignore)
+plugins=(rails git ruby osx rvm brew autojump bundler git-flow gitignore sbt)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
@@ -36,24 +36,26 @@ if [ -f $HOME/.api_keys ]; then
 	source $HOME/.api_keys
 fi
 
-# Customize to your needs...
 #Homes
-export JAVA_HOME=/Library/Java/Home
-export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 export ANDROID_HOME="/Applications/android"
-export NODE_PATH="/usr/local/lib/node_modules"
-export NUNIT_HOME="/Users/tony/bin/NUnit"
-export GROOVY_HOME="/usr/local/opt/groovy/libexec"
 
-export PATH=/Users/tony/.rvm/bin:/Users/tony/bin:/Users/tony/bin/servers:/Users/tony/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH
-export PATH="$HOME/.cask/bin:$PATH"
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=/Applications/android/tools:/Applications/android/platform-tools:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=~/bin:$PATH
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "/Users/tony/.rvm/scripts/rvm" ]] && source "/Users/tony/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
- 
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
+. `brew --prefix`/etc/profile.d/z.sh
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Jenv
+export JENV_ROOT=/usr/local/var/jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

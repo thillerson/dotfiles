@@ -7,3 +7,8 @@ ecollegelogin() {
 ecollegequery() {
 	curl --silent -H "X-Authorization: Access_Token access_token=$ECOLLEGE_ACCESS_TOKEN" https://m-api.ecollege.com$@ | python -mjson.tool
 }
+
+mkcd () {
+  case "$1" in /*) :;; *) set -- "./$1";; esac
+  mkdir -p "$1" && cd "$1"
+}
