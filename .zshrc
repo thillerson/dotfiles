@@ -36,26 +36,48 @@ if [ -f $HOME/.api_keys ]; then
 	source $HOME/.api_keys
 fi
 
+# Customize to your needs...
+
 #Homes
 export ANDROID_HOME="/Applications/android"
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NODE_PATH="/usr/local/lib/node_modules"
+export NUNIT_HOME="/Users/tony/bin/NUnit"
+export GROOVY_HOME="/usr/local/opt/groovy/libexec"
+export RUBYMOTION_ANDROID_SDK=/Users/tony/.rubymotion-android/sdk
+export RUBYMOTION_ANDROID_NDK=/Users/tony/.rubymotion-android/ndk
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ANDROID_HOME/tools/lib
+
+export PATH=/Users/tony/.rvm/bin:/Users/tony/bin:/Users/tony/bin/servers:/Users/tony/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.cask/bin:$PATH"
 export PATH=/Applications/android/tools:/Applications/android/platform-tools:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=~/bin:$PATH
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "/Users/tony/.rvm/scripts/rvm" ]] && source "/Users/tony/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
+if [ -f `brew --prefix`/etc/profile.d/z.sh ]; then
+  . `brew --prefix`/etc/profile.d/z.sh
+fi
 
-. `brew --prefix`/etc/profile.d/z.sh
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# jenv
 # Jenv
-export JENV_ROOT=/usr/local/var/jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+export JENV_ROOT=/usr/local/opt/jenv
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export NVM_DIR="/Users/tony/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
