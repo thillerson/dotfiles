@@ -27,7 +27,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git ruby osx rvm brew autojump bundler git-flow gitignore sbt)
+plugins=(rails git ruby osx rvm brew autojump bundler git-flow gitignore sbt docker)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
@@ -83,5 +83,8 @@ export NVM_DIR="/Users/tony/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Golang
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+
+# MachineShop
+source $HOME/.machineshop
