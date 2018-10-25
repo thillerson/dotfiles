@@ -77,6 +77,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 export JENV_ROOT=/usr/local/opt/jenv
 
+# ASDF, env manager (https://github.com/asdf-vm/asdf)
+source /usr/local/opt/asdf/asdf.sh
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export NVM_DIR="/Users/tony/.nvm"
@@ -88,3 +91,4 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
 
 # MachineShop
 source $HOME/.machineshop
+
