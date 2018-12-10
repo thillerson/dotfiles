@@ -4,7 +4,7 @@ if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
 fi
 
-if [ -n "$PS1" ]; then PS1='\033[1;33;40m[\033[1;32;40m$(~/.rvm/bin/rvm-prompt i v p g s)\033[1;33;40m][\033[1;32;40m\u@\h:\w\033[1;33;40m]$(__git_ps1 " (%s)")\033[0m\n\$ '; fi
+if [ -n "$PS1" ]; then PS1='\033[1;33;40m[\033[1;32;40m\033[1;33;40m][\033[1;32;40m\u@\h:\w\033[1;33;40m]$(__git_ps1 " (%s)")\033[0m\n\$ '; fi
 
 export HISTCONTROL=ignoredups
 export HISTCONTROL=ignoreboth

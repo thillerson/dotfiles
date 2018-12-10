@@ -1,13 +1,3 @@
-ecollegelogin() {
-	export ECOLLEGE_TOKEN=`curl --silent -F "client_id=30bb1d4f-2677-45d1-be13-339174404402" -F "grant_type=password" -F "username=sandbox\mobilestu" -F "password=mobilestu" https://m-api.ecollege.com/token`
-	echo "eCollege Token: $ECOLLEGE_TOKEN"
-	export ECOLLEGE_ACCESS_TOKEN=`echo $ECOLLEGE_TOKEN | jsawk 'return this.access_token'`
-}
-	 
-ecollegequery() {
-	curl --silent -H "X-Authorization: Access_Token access_token=$ECOLLEGE_ACCESS_TOKEN" https://m-api.ecollege.com$@ | python -mjson.tool
-}
-
 mkcd () {
   case "$1" in /*) :;; *) set -- "./$1";; esac
   mkdir -p "$1" && cd "$1"
