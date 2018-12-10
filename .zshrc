@@ -32,9 +32,6 @@ plugins=(rails git ruby osx rvm brew autojump bundler git-flow gitignore sbt doc
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
 source $HOME/.custom_scripts
-if [ -f $HOME/.api_keys ]; then
-	source $HOME/.api_keys
-fi
 
 # Customize to your needs...
 
