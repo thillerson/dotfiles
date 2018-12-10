@@ -44,7 +44,7 @@ fi
 # Characters
 SEGMENT_SEPARATOR="\u276F" #"\u25b6"
 PLUSMINUS="\u00b1"
-BRANCH="\u2387" #"\ue0a0"
+BRANCH="\u2b60" #alt "\u2387" #orig "\ue0a0"
 DETACHED="\u27a6"
 CROSS="\u2718"
 LIGHTNING="\u26a1"
