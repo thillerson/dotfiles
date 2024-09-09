@@ -64,3 +64,5 @@ pman() {
 
 alias gw='./gradlew'
 alias xc='~/bin/xctool/xctool.sh'
+
+alias tf='terraform'
