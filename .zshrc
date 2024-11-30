@@ -35,14 +35,10 @@ source $HOME/.custom_scripts
 
 #Homes
 export ANDROID_HOME="/Applications/android"
-
-export NUNIT_HOME="/Users/tony/bin/NUnit"
 export GRADLE_USER_HOME="/Users/tony"
-export RUBYMOTION_ANDROID_SDK=/Users/tony/.rubymotion-android/sdk
-export RUBYMOTION_ANDROID_NDK=/Users/tony/.rubymotion-android/ndk
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ANDROID_HOME/tools/lib
 
-export PATH=/opt/homebrew/bin:/Users/tony/.rvm/bin:/Users/tony/bin:/Users/tony/bin/servers:/Users/tony/.cabal/bin:/Applications/android/tools:/Applications/android/platform-tools:/Applications/flex_sdk/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:/Users/tony/.rvm/bin:/Users/tony/bin:/Users/tony/bin/servers:/usr/local/bin:$PATH
 export PATH="$HOME/.cask/bin:$PATH"
 export PATH=/Applications/android/tools:/Applications/android/platform-tools:$PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -75,13 +71,7 @@ export NVM_DIR="/Users/tony/.nvm"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
 
-# MachineShop
-source $HOME/.machineshop
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Dotnet
-export DOTNET_HOST_PATH="/usr/local/share/dotnet"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/tony/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tony/google-cloud-sdk/path.zsh.inc'; fi
@@ -100,3 +90,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# JetBrains Tool Scripts
+export PATH="/Users/tony/.jetbrains:${PATH}"
